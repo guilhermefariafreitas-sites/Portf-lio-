@@ -1,0 +1,6 @@
+{
+  "name": "Premium Web",
+  "description": "Estúdio de criação de sites profissionais, responsivos e de alta conversão entregues em menos de 24 horas para empresas em todo o Brasil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

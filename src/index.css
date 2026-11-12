@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Outfit", system-ui, -apple-system, sans-serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-obsidian: #040812;
+  --color-navy-deep: #070F20;
+  --color-navy-surface: #0C162C;
+  --color-navy-elevated: #12203D;
+  --color-navy-accent: #1E40AF;
+  --color-platinum: #CBD5E1;
+  --color-silver-muted: #94A3B8;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #040812;
+    color: #F8FAFC;
+    scroll-padding-top: 5rem;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+  }
+
+  /* Optical compensation for light text on dark backgrounds */
+  p, li, span {
+    letter-spacing: 0.005em;
+  }
+
+  :focus-visible {
+    outline: 2px solid #E2E8F0;
+    outline-offset: 2px;
+  }
+}
+
+.metallic-hairline {
+  background: linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.05) 0%,
+    rgba(226, 232, 240, 0.32) 50%,
+    rgba(148, 163, 184, 0.05) 100%
+  );
+}
+
+.metallic-card {
+  background: linear-gradient(160deg, rgba(16, 29, 56, 0.92) 0%, rgba(7, 14, 29, 0.98) 100%);
+  border: 1px solid rgba(203, 213, 225, 0.14);
+}
+
+.metallic-card-interactive {
+  background: linear-gradient(160deg, rgba(16, 29, 56, 0.92) 0%, rgba(7, 14, 29, 0.98) 100%);
+  border: 1px solid rgba(203, 213, 225, 0.14);
+  transition: border-color 180ms cubic-bezier(0.16, 1, 0.3, 1), transform 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.metallic-card-interactive:hover {
+  border-color: rgba(226, 232, 240, 0.34);
+}
+
+.metallic-text {
+  background: linear-gradient(180deg, #FFFFFF 15%, #CBD5E1 65%, #94A3B8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
